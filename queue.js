@@ -1,19 +1,19 @@
-// Queues
 class Queue {
   constructor() {
     this.queue = [];
   }
 
   enqueue(item) {
-    this.queue.unshift(item);
+    this.queue.push(item);
   }
 
   dequeue() {
-    this.queue.pop();
+    const item = this.queue.shift();
+    return item;
   }
 
   peek() {
-    return this.queue[this.queue.length - 1];
+    return this.queue[0];
   }
 
   length() {
